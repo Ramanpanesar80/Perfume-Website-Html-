@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="details.css">
+</head>
+<body>
+    <div class="details-container">
+        <h1>Product Name</h1>
+        <img src="img1.jpg" alt="404 Not Found" class="main-image">
+        <p>Comprehensive description of the product goes here.
+            It includes details about features, specifications, and usage.</p>
+        
+        <div class="gallery">
+            <img src="img1.jpg" alt="404 Not Found">
+            <img src="img1.jpg" alt="404 Not Found">
+            <img src="img1.jpg" alt="404 Not Found">
+        </div>
+        
+        <button onclick="goBack()" class="back-button">Back to Products</button>
+        <button onclick="showAlert()" class="action-button">Add to Cart / Contact Me</button>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function showAlert() {
+            alert("Thank you for choosing Ysl!");
+        }
+    </script>
+</body>
+</html>
