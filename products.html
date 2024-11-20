@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+    <h1>Products</h1>
+    <select id="categoryFilter" onchange="filterItems()">
+        <option value="all">All</option>
+        <option value="category1">Category 1</option>
+        <option value="category2">Category 2</option>
+    </select>
+
+    <div id="product-grid" class="product-grid">
+        <div class="product-item" data-category="category1">
+            <img src="img1.jpg" alt="Product 1">
+            <p>Brief description of product 1</p>
+            <a href="details.html" class="details-button">View Details</a>
+        </div>
+        <div class="product-item" data-category="category2">
+            <img src="img2.jpg" alt="Product 2">
+            <p>Brief description of product 2</p>
+            <a href="details2.html" class="details-button">View Details</a>
+        </div>
+        <div class="product-item" data-category="category1">
+            <img src="img3.jpg" alt="Product 3">
+            <p>Brief description of product 3</p>
+            <a href="details3.html" class="details-button">View Details</a>
+        </div>
+    </div>
+
+    <script>
+        
+
+    function filterItems() {
+    const filter = document.getElementById('categoryFilter').value;
+    const items = document.querySelectorAll('.product-item');
+    
+    items.forEach(item => {
+        if (filter === 'all' || item.dataset.category === filter) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+
+    </script>
+</body>
+</html>
